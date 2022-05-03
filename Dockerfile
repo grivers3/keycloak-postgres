@@ -17,5 +17,3 @@ ENV KC_HOSTNAME_STRICT_BACKCHANNEL=false
 ENV KC_HOSTNAME_STRICT_HTTPS=false
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]
-
-
