@@ -11,6 +11,7 @@ RUN /opt/keycloak/bin/kc.sh build
 FROM quay.io/keycloak/keycloak:latest
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
+ENV KC_PROXY=edge
 ENV KC_HTTP_ENABLED=true
 ENV KC_HOSTNAME_STRICT=true
 ENV KC_HOSTNAME_STRICT_BACKCHANNEL=false
